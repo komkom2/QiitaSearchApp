@@ -18,15 +18,30 @@ import com.websarva.wings.android.qiitasearchapp.model.QiitaArticle;
 
 import java.util.List;
 
+/**
+ * Qiitaの記事リストをRecyclerViewに表示するアダプタークラス
+ * 記事タイトル、ユーザー名、投稿日、プロフィール画像を表示
+ *
+ */
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder> {
+    /** 記事リスト */
     private List<QiitaArticle> articles;
+    /** コンテキスト */
     private Context context;
 
+    /**
+     * コンストラクタ
+     * @param context 呼び出し元のコンテキスト
+     * @param articles 表示する記事リスト
+     */
     public ArticleAdapter(Context context, List<QiitaArticle> articles) {
         this.context = context;
         this.articles = articles;
     }
 
+    /**
+     * ViewHolderの作成
+     */
     @NonNull
     @Override
     public ArticleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,6 +49,9 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
         return new ArticleViewHolder(view);
     }
 
+    /**
+     * ViewHolderのUIに記事データをセット
+     */
     @Override
     public void onBindViewHolder(@NonNull ArticleViewHolder holder, int position) {
         QiitaArticle article = articles.get(position);
@@ -54,11 +72,17 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
         });
     }
 
+    /**
+     * 記事の件数を返す
+     */
     @Override
     public int getItemCount() {
         return articles.size();
     }
 
+    /**
+     * 記事リストの1行分のViewHolderクラス
+     */
     static class ArticleViewHolder extends RecyclerView.ViewHolder {
         ImageView profileImageView;
         TextView userNameText;
