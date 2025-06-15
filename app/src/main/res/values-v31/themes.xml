@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.QiitaSearchApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="android:windowSplashScreenBackground">?android:colorBackground</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">#55c500</item>
+    </style>
+</resources>
