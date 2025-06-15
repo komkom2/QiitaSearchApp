@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QiitaSearchApp</string>
+
+    <string name="desc_plofile_img_view">プロフィール画像</string>
+    <string name="placeholder_user_name">ユーザー名</string>
+    <string name="placeholder_created_at">投稿日</string>
+    <string name="placeholder_title">記事タイトル(2行まで表示)</string>
 </resources>
