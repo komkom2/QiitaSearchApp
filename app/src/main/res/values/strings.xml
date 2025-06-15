@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QiitaSearchApp</string>
+    <string name="app_name">QSearch</string>
 
     <string name="desc_plofile_img_view">プロフィール画像</string>
     <string name="placeholder_user_name">ユーザー名</string>
